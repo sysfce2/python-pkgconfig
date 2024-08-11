@@ -140,7 +140,7 @@ def test_configure_extension():
     ext = Extension('foo', ['foo.c'])
     pkgconfig.configure_extension(ext, 'fake-gtk+-3.0 fake-python')
     assert sorted(ext.extra_compile_args) == [
-         '-DGSEAL_ENABLE', '-I/usr/include/gtk-3.0','-I/usr/include/python2.7']
+         '-DGSEAL_ENABLE', '-I/usr/include/gtk-3.0', '-I/usr/include/python2.7']
     assert sorted(ext.extra_link_args) == [
         '-L/usr/lib_gtk_foo', '-L/usr/lib_python_foo', '-lgtk-3', '-lpython2.7']
 
