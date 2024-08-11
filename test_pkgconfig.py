@@ -1,4 +1,4 @@
-from distutils.core import Extension
+from setuptools import Extension
 import os
 import pytest
 import pkgconfig
