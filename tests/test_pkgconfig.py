@@ -3,7 +3,8 @@ import os
 import pytest
 import pkgconfig
 
-os.environ['PKG_CONFIG_PATH'] = os.path.abspath('./data')
+this_dir = os.path.dirname(__file__)
+os.environ['PKG_CONFIG_PATH'] = os.path.abspath(os.path.join(this_dir, 'data'))
 PACKAGE_NAME = 'fake-gtk+-3.0'
 
 
