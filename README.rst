@@ -1,8 +1,8 @@
 pkgconfig
 =========
 
-.. image:: https://travis-ci.org/matze/pkgconfig.png?branch=master
-    :target: https://travis-ci.org/matze/pkgconfig
+.. image:: https://github.com/matze/pkgconfig/workflows/CI/badge.svg?branch=master
+    :target: https://github.com/matze/pkgconfig/actions/workflows/ci.yml
 
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
 command line tool for Python 3.3+.
