@@ -47,6 +47,7 @@ jobs:
     - name: Install Python requirements
       run: |
         python -m pip install --upgrade pip
+        pip install tox
     - name: Install pkgconfig
       run: pip install -ve .
     - name: run tox env
@@ -76,6 +77,7 @@ jobs:
     - name: Install Python requirements
       run: |
         python -m pip install --upgrade pip
+        pip install tox
     - name: Install pkgconfig
       run: pip install -ve .
     - name: run tox env
