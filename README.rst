@@ -1,7 +1,7 @@
 pkgconfig
 =========
 
-.. image:: https://github.com/matze/pkgconfig/workflows/CI/badge.svg?branch=master
+.. image:: https://github.com/matze/pkgconfig/workflows/CI/badge.svg
     :target: https://github.com/matze/pkgconfig/actions/workflows/ci.yml
 
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
