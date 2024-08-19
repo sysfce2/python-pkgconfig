@@ -5,7 +5,7 @@ pkgconfig
     :target: https://github.com/matze/pkgconfig/actions/workflows/ci.yml
 
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
-command line tool for Python 3.3+.
+command line tool for Python 3.9+.
 
 It can be used to
 
