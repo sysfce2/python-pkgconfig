@@ -1,7 +1,7 @@
 pkgconfig
 =========
 
-.. image:: https://github.com/matze/pkgconfig/workflows/CI/badge.svg?branch=master
+.. image:: https://github.com/matze/pkgconfig/workflows/CI/badge.svg
     :target: https://github.com/matze/pkgconfig/actions/workflows/ci.yml
 
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
@@ -64,6 +64,20 @@ The ``pkgconfig`` module is licensed under the MIT license.
 
 Changelog
 ---------
+
+Version 1.6.0
+~~~~~~~~~~~~~
+
+- Drop support for Python < 3.9, support 3.9, 3.10, 3.11, 3.12.
+- Switch CI from travis to github actions, test on all supported Python versions.
+- Use src/ layout for project, fixes #36. Also move tests and test data to tests/.
+- Replace deprecated distutils by setuptools to make tests work on py312, fixes #64.
+- Fix configure_extension for empty cflags or libs.
+
+Version 1.5.5
+~~~~~~~~~~~~~
+
+- Make tests more robust by sorting
 
 Version 1.5.4
 ~~~~~~~~~~~~~
