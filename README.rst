@@ -5,7 +5,7 @@ pkgconfig
     :target: https://github.com/matze/pkgconfig/actions/workflows/ci.yml
 
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
-command line tool for Python 3.9+.
+command-line tool for Python 3.9+.
 
 It can be used to
 
@@ -53,11 +53,11 @@ It can be used to
        >>> # sets extension attributes as needed
        >>> pkgconfig.configure_extension(ext, 'glib-2.0 gtk+-2.0')
 
-   The ``pkgconfig.parse`` function returns a dictonary of lists.
+   The ``pkgconfig.parse`` function returns a dictionary of lists.
    The lists returned are accurate representations of the equivalent
-   ``pkg-config`` call's result, both in content and order.
+   ``pkg-config`` call's results, both in content and order.
 
-If ``pkg-config`` is not on the path, raises ``EnvironmentError``.
+If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
 
 The ``pkgconfig`` module is licensed under the MIT license.
 
@@ -69,15 +69,15 @@ Version 1.6.0 (not released yet)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Drop support for Python < 3.9, support 3.9, 3.10, 3.11, 3.12, 3.13.
-- Switch CI from travis to github actions, test on all supported Python versions.
+- Switch CI from Travis to GitHub Actions; test on all supported Python versions.
 - Use src/ layout for project, fixes #36. Also move tests and test data to tests/.
-- Replace deprecated distutils by setuptools to make tests work on py312, fixes #64.
+- Replace deprecated distutils with setuptools to make tests work on Python 3.12; fixes #64.
 - Fix configure_extension for empty cflags or libs.
 
 Version 1.5.5
 ~~~~~~~~~~~~~
 
-- Make tests more robust by sorting
+- Make tests more robust by sorting.
 
 Version 1.5.4
 ~~~~~~~~~~~~~
@@ -92,7 +92,7 @@ Version 1.5.3
 Version 1.5.2
 ~~~~~~~~~~~~~
 
-- Update poetry dep
+- Update poetry dependency
 - Improve CI
 
 Version 1.5.0
@@ -125,7 +125,7 @@ Version 1.3.0
 Version 1.2.1 and 1.2.2
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Bug fix releases released on December 1st and 2nd 2016.
+Bugfix releases on December 1 and 2, 2016.
 
 - Include the ``data`` folder in the distribution in order to run tests
 - Improve the tests
@@ -134,17 +134,17 @@ Bug fix releases released on December 1st and 2nd 2016.
 Version 1.2.0
 ~~~~~~~~~~~~~
 
-Released on November 30th 2016.
+Released on November 30th, 2016.
 
 - Potential break: switch from result set to list
-- Expose --list-all query
-- Added support for PKG_CONFIG environment variable
+- Expose the --list-all query
+- Added support for the PKG_CONFIG environment variable
 
 
 Version 1.1.0
 ~~~~~~~~~~~~~
 
-Released on November 6th 2013.
+Released on November 6th, 2013.
 
 - Multiple packages can now be parsed with a single call to ``.parse``.
 
@@ -152,4 +152,4 @@ Released on November 6th 2013.
 Version 1.0.0
 ~~~~~~~~~~~~~
 
-First release on September 8th 2013.
+First release on September 8th, 2013.
