@@ -20,7 +20,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^8.4.2"
 tox = "<4.30"
 
