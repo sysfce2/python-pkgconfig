@@ -58,18 +58,18 @@ def test_openssl(version, expected):
     # PLEASE NOTE:
     # sadly, when looking at all (esp. non-python) libraries out there, there
     # is no agreement on the semantics of letters appended to version numbers.
-    # e.g. for a release candidate, some might use "c", but other also might
-    # use "rc" or whatever. stuff like openssl does not use the letters to
+    # e.g. for a release candidate, some might use "c", but others also might
+    # use "rc" or whatever. Software like OpenSSL does not use the letters to
     # represent release status, but rather minor updates using a-z.
     # so, as there is no real standard / agreement, we can NOT assume any
     # advanced semantics here (like we could for python packages).
     # thus we do NOT implement any special semantics for the letters,
-    # except string ordering
-    # thus, comparing a version with a letter-digits appendix to one without
+    # except string ordering.
+    # thus, comparing a version with a letter–digits suffix to one without
     # may or may not give the desired result.
     # e.g. python packages use a1 for alpha 1, b2 for beta 2, c3 for release
     # candidate 3 and <nothing> for release.
-    # we do not implement this semantics, "1.2.3" > "1.2.3b1" does not work.
+    # we do not implement these semantics; "1.2.3" > "1.2.3b1" does not work.
 ])
 def test_dld_pkg(version, expected):
     assert pkgconfig.installed('fake-dld-pkg', version) == expected
