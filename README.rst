@@ -65,8 +65,8 @@ The ``pkgconfig`` module is licensed under the MIT license.
 Changelog
 ---------
 
-Version 1.6.0
-~~~~~~~~~~~~~
+Version 1.6.0 (not released yet)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Drop support for Python < 3.9, support 3.9, 3.10, 3.11, 3.12, 3.13.
 - Switch CI from travis to github actions, test on all supported Python versions.
