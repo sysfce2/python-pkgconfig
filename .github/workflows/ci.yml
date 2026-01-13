@@ -73,7 +73,7 @@ jobs:
         poetry --version
         poetry install
     - name: run tox env
-      run: poetry run tox --skip-missing-interpreters
+      run: poetry run tox -c pyproject.toml --skip-missing-interpreters
 
   macOS:
 
@@ -107,4 +107,4 @@ jobs:
         poetry --version
         poetry install
     - name: run tox env
-      run: poetry run tox --skip-missing-interpreters
+      run: poetry run tox -c pyproject.toml --skip-missing-interpreters
