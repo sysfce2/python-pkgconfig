@@ -68,7 +68,7 @@ Changelog
 Version 1.6.0 (not released yet)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Drop support for Python < 3.9, support 3.9, 3.10, 3.11, 3.12, 3.13.
+- Drop support for Python < 3.9, support 3.9 .. 3.14.
 - Switch CI from Travis to GitHub Actions; test on all supported Python versions.
 - Use src/ layout for project, fixes #36. Also move tests and test data to tests/.
 - Replace deprecated distutils with setuptools to make tests work on Python 3.12; fixes #64.
