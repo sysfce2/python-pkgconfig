@@ -19,7 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""pkgconfig is a Python module to interface with the pkg-config command line
+"""pkgconfig is a Python module to interface with the pkg-config command-line
 tool."""
 
 import os
@@ -118,7 +118,7 @@ def exists(package):
     """
     Return True if package information is available.
 
-    If ``pkg-config`` not on path, raises ``EnvironmentError``.
+    If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
     """
     pkg_config_exe = os.environ.get('PKG_CONFIG', None) or 'pkg-config'
     cmd = '{0} --exists {1}'.format(pkg_config_exe, package).split()
@@ -128,9 +128,9 @@ def exists(package):
 @_convert_error
 def requires(package):
     """
-    Return a list of package names that is required by the package.
+    Return a list of package names that are required by the package.
 
-    If ``pkg-config`` not on path, raises ``EnvironmentError``.
+    If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
     """
     return _query(package, '--print-requires').split('\n')
 
@@ -139,7 +139,7 @@ def cflags(package):
     """
     Return the CFLAGS string returned by pkg-config.
 
-    If ``pkg-config`` is not on path, raises ``EnvironmentError``.
+    If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
     """
     _raise_if_not_exists(package)
     return _query(package, '--cflags')
@@ -149,7 +149,7 @@ def modversion(package):
     """
     Return the version returned by pkg-config.
 
-    If `pkg-config` is not in the path, raises ``EnvironmentError``.
+    If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
     """
     _raise_if_not_exists(package)
     return _query(package, '--modversion')
@@ -169,7 +169,7 @@ def libs(package, static=False):
 def variables(package):
     """
     Return a dictionary of all the variables defined in the .pc pkg-config file
-    of 'package'.
+    of the package.
     """
     _raise_if_not_exists(package)
     result = _query(package, '--print-variables')
@@ -182,8 +182,8 @@ def installed(package, version):
     Check if the package meets the required version.
 
     The version specifier consists of an optional comparator (one of =, ==, >,
-    <, >=, <=) and an arbitrarily long version number separated by dots. The
-    should be as you would expect, e.g. for an installed version '0.1.2' of
+    <, >=, <=) and an arbitrarily long version number separated by dots. The comparisons
+    behave as you would expect. For example, for an installed version '0.1.2' of
     package 'foo':
 
     >>> installed('foo', '==0.1.2')
@@ -193,7 +193,7 @@ def installed(package, version):
     >>> installed('foo', '>= 0.0.4')
     True
 
-    If ``pkg-config`` not on path, raises ``EnvironmentError``.
+    If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
     """
     if not exists(package):
         return False
@@ -237,12 +237,12 @@ def parse(packages, static=False):
 
     Builds a dictionary containing the 'libraries', the 'library_dirs', the
     'include_dirs', and the 'define_macros' that are presented by pkg-config.
-    *package* is a string with space-delimited package names.
+    *packages* is a string with space-delimited package names.
 
     The static specifier will also include libraries for static linking (i.e.,
     includes any private libraries).
 
-    If ``pkg-config`` is not on path, raises ``EnvironmentError``.
+    If ``pkg-config`` is not on the PATH, an ``EnvironmentError`` is raised.
     """
     for package in packages.split():
         _raise_if_not_exists(package)
