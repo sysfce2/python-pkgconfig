@@ -7,7 +7,11 @@ pkgconfig
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
 command-line tool for Python 3.9+.
 
-It can be used to
+The ``pkg-config`` command-line tool typically comes from a package either
+called ``pkg-config`` (the original implementation) or ``pkgconf`` (a more
+recent, improved reimplementation intended as a drop-in replacement).
+
+The ``pkgconfig`` module can be used to
 
 -  find all pkg-config packages ::
 
