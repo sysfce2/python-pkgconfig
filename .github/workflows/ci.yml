@@ -96,7 +96,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install macOS packages
       run: |
-        brew install pkg-config || brew upgrade pkg-config
+        brew install pkgconf || brew upgrade pkgconf
     - name: Install Python requirements
       run: |
         python -m pip install --upgrade pip
