@@ -7,7 +7,11 @@ pkgconfig
 ``pkgconfig`` is a Python module to interface with the ``pkg-config``
 command-line tool for Python 3.9+.
 
-It can be used to
+The ``pkg-config`` command-line tool typically comes from a package either
+called ``pkg-config`` (the original implementation) or ``pkgconf`` (a more
+recent, improved reimplementation intended as a drop-in replacement).
+
+The ``pkgconfig`` module can be used to
 
 -  find all pkg-config packages ::
 
@@ -65,10 +69,11 @@ The ``pkgconfig`` module is licensed under the MIT license.
 Changelog
 ---------
 
-Version 1.6.0 (not released yet)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 1.6.0
+~~~~~~~~~~~~~
 
 - Drop support for Python < 3.9, support 3.9 .. 3.14.
+- README: clarify pkg-config and pkgconf, #75
 - Switch CI from Travis to GitHub Actions; test on all supported Python versions.
 - Use src/ layout for project, fixes #36. Also move tests and test data to tests/.
 - Replace deprecated distutils with setuptools to make tests work on Python 3.12; fixes #64.
